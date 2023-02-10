@@ -12,4 +12,10 @@ export class ShoppingListComponent {
     new Ingredient('Potatos', 2),
     new Ingredient('Onions', 10)
   ];
+
+  onItemArrived(item: Ingredient) {
+    if(Object.values(item).every(value => !!value)) {
+      this.ingredients.push(item)
+    }
+  }
 }
